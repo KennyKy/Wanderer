@@ -3,8 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/kenny/AndroidStudioProjects/Trabalho_01/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/Users/kenny/AndroidStudioProjects/Trabalho_01/app/src/main/res/drawable/arrow.xml" value="0.2169230769230769" />
+        <entry key="..\:/Users/kenny/AndroidStudioProjects/Trabalho_01/app/src/main/res/drawable/back.xml" value="0.2169230769230769" />
+        <entry key="..\:/Users/kenny/AndroidStudioProjects/Trabalho_01/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/kenny/AndroidStudioProjects/Trabalho_01/app/src/main/res/layout/createaccount.xml" value="0.25" />
         <entry key="..\:/Users/kenny/AndroidStudioProjects/Trabalho_01/app/src/main/res/layout/createcount.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/kenny/AndroidStudioProjects/Trabalho_01/app/src/main/res/layout/fuel.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/kenny/AndroidStudioProjects/Trabalho_01/app/src/main/res/layout/travel.xml" value="0.25" />
       </map>
     </option>
   </component>
