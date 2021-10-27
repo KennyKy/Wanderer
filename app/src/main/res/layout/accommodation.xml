@@ -28,8 +28,8 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="50dp"
-        android:drawableLeft="@drawable/gasoline"
-        android:text="Gasolina"
+        android:drawableLeft="@drawable/bed"
+        android:text="Hospedagem"
         android:layout_marginTop="15dp"
         android:layout_marginLeft="16dp"
         android:textSize="35dp"
@@ -39,7 +39,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="30dp"
-        android:text="Quilômetragem:"
+        android:text="Custo médio (por noite):"
         android:layout_marginTop="15dp"
         android:layout_marginLeft="20dp"
         android:textSize="20dp"
@@ -52,13 +52,13 @@
         android:textSize="20dp"
         android:layout_marginLeft="18dp"
         android:background="@color/white"
-        android:hint=" Informe a quilômetragem">
+        android:hint=" Informe o custo médio">
     </EditText>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="30dp"
-        android:text="Média de quilômetros por litro:"
+        android:text="Total de noites:"
         android:layout_marginTop="15dp"
         android:layout_marginLeft="20dp"
         android:textSize="20dp"
@@ -71,13 +71,13 @@
         android:textSize="20dp"
         android:layout_marginLeft="18dp"
         android:background="@color/white"
-        android:hint=" Informe a média">
+        android:hint=" Informe o total de noites">
     </EditText>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="30dp"
-        android:text="Custo médio por litro:"
+        android:text="Total de quartos:"
         android:layout_marginTop="15dp"
         android:layout_marginLeft="20dp"
         android:textSize="20dp"
@@ -90,26 +90,7 @@
         android:textSize="20dp"
         android:layout_marginLeft="18dp"
         android:background="@color/white"
-        android:hint=" Informe o custo médio por litro">
-    </EditText>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:text="Total de veículos:"
-        android:layout_marginTop="15dp"
-        android:layout_marginLeft="20dp"
-        android:textSize="20dp"
-        android:textColor="@color/black">
-    </TextView>
-
-    <EditText
-        android:layout_width="375dp"
-        android:layout_height="40dp"
-        android:textSize="20dp"
-        android:layout_marginLeft="18dp"
-        android:background="@color/white"
-        android:hint=" Informe o total de veículos">
+        android:hint=" Informe o total de quartos">
     </EditText>
 
     <TextView

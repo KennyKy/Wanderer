@@ -28,8 +28,8 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="50dp"
-        android:drawableLeft="@drawable/gasoline"
-        android:text="Gasolina"
+        android:drawableLeft="@drawable/snack"
+        android:text="Refeições"
         android:layout_marginTop="15dp"
         android:layout_marginLeft="16dp"
         android:textSize="35dp"
@@ -39,7 +39,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="30dp"
-        android:text="Quilômetragem:"
+        android:text="Custo estimado por refeição:"
         android:layout_marginTop="15dp"
         android:layout_marginLeft="20dp"
         android:textSize="20dp"
@@ -52,13 +52,13 @@
         android:textSize="20dp"
         android:layout_marginLeft="18dp"
         android:background="@color/white"
-        android:hint=" Informe a quilômetragem">
+        android:hint=" Informe custo estimado">
     </EditText>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="30dp"
-        android:text="Média de quilômetros por litro:"
+        android:text="Refeições por dia:"
         android:layout_marginTop="15dp"
         android:layout_marginLeft="20dp"
         android:textSize="20dp"
@@ -71,45 +71,7 @@
         android:textSize="20dp"
         android:layout_marginLeft="18dp"
         android:background="@color/white"
-        android:hint=" Informe a média">
-    </EditText>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:text="Custo médio por litro:"
-        android:layout_marginTop="15dp"
-        android:layout_marginLeft="20dp"
-        android:textSize="20dp"
-        android:textColor="@color/black">
-    </TextView>
-
-    <EditText
-        android:layout_width="375dp"
-        android:layout_height="40dp"
-        android:textSize="20dp"
-        android:layout_marginLeft="18dp"
-        android:background="@color/white"
-        android:hint=" Informe o custo médio por litro">
-    </EditText>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:text="Total de veículos:"
-        android:layout_marginTop="15dp"
-        android:layout_marginLeft="20dp"
-        android:textSize="20dp"
-        android:textColor="@color/black">
-    </TextView>
-
-    <EditText
-        android:layout_width="375dp"
-        android:layout_height="40dp"
-        android:textSize="20dp"
-        android:layout_marginLeft="18dp"
-        android:background="@color/white"
-        android:hint=" Informe o total de veículos">
+        android:hint=" Número de refeições">
     </EditText>
 
     <TextView
