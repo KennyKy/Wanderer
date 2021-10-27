@@ -19,7 +19,7 @@ public class UsersDAO extends AbstractDAO {
         db_helper = new DbOpenHelper(context);
     }
 
-    public long Insert(User model) {
+    public long insert(User model) {
         long numberOfRows;
 
         try {
@@ -46,8 +46,7 @@ public class UsersDAO extends AbstractDAO {
         return 0;
     }
 
-    //- Select da validação do login.
-    public User VerifyLogin(final String username, final String password) {
+    public User verifyLogin(final String username, final String password) {
 
         User model = null;
         try {
@@ -75,7 +74,7 @@ public class UsersDAO extends AbstractDAO {
         return model;
     }
 
-    public User Select(final String username) {
+    public User select(final String username) {
         User model = null;
 
         try {

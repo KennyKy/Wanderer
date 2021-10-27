@@ -65,11 +65,33 @@
     </TextView>
 
     <EditText
+        android:id="@+id/username_text_edit"
         android:layout_width="match_parent"
         android:layout_height="70px"
         android:layout_marginLeft="33dp"
         android:layout_marginRight="35dp"
         android:text="Username"
+        android:background="@color/white"
+        android:textColor="@color/icons">
+    </EditText>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Email"
+        android:textSize="45px"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="35dp"
+        android:textColor="@color/icons">
+    </TextView>
+
+    <EditText
+        android:id="@+id/email_text_edit"
+        android:layout_width="match_parent"
+        android:layout_height="70px"
+        android:layout_marginLeft="33dp"
+        android:layout_marginRight="35dp"
+        android:text="Email"
         android:background="@color/white"
         android:textColor="@color/icons">
     </EditText>
@@ -85,6 +107,7 @@
     </TextView>
 
     <EditText
+        android:id="@+id/password_text_edit"
         android:layout_width="match_parent"
         android:layout_height="70px"
         android:layout_marginLeft="33dp"
@@ -95,6 +118,7 @@
     </EditText>
 
     <Button
+        android:id="@+id/crate_account_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
