@@ -86,7 +86,7 @@ public class UsersDAO extends AbstractDAO {
                     new String[]{username},
                     null,
                     null,
-                    null); //
+                    null);
 
             cursor.moveToFirst();
             while (!cursor.isAfterLast()) {
@@ -103,9 +103,9 @@ public class UsersDAO extends AbstractDAO {
 
     public final User CursorToStructure(Cursor cursor) {
         User model = new User();
-        model.setEmail(cursor.getString(1));
-        model.setPassword(cursor.getString(2));
-        model.setUsername(cursor.getString(3));
+        model.setEmail(cursor.getString(0));
+        model.setPassword(cursor.getString(1));
+        model.setUsername(cursor.getString(2));
         return model;
     }
 }

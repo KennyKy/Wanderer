@@ -20,9 +20,9 @@ public class CreateAccount extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.create_account);
-        editUser = findViewById(R.id.username_text_edit);
-        editPassword = findViewById(R.id.password_text_edit);
-        editEmail = findViewById(R.id.email_text_edit);
+        editUser = findViewById(R.id.editUsername);
+        editPassword = findViewById(R.id.editPassword);
+        editEmail = findViewById(R.id.editEmail);
         signup = findViewById(R.id.crate_account_button);
 
         signup.setOnClickListener(new View.OnClickListener() {
@@ -34,10 +34,12 @@ public class CreateAccount extends AppCompatActivity {
                 user.setEmail(editEmail.getText().toString());
                 user.setPassword(editPassword.getText().toString());
 
+                //TODO: Validação dos campos
+
                 User verifyUser = new User();
                 UsersDAO dao = new UsersDAO(CreateAccount.this);
 
-                verifyUser = dao.verifyLogin(user.getUsername(), user.getPassword());
+                verifyUser = dao.select(user.getUsername());
 
                 if ( verifyUser != null ) {
                     Toast.makeText(CreateAccount.this, "Usuário já cadastrado, por favor insira outro usuário.", Toast.LENGTH_SHORT).show();

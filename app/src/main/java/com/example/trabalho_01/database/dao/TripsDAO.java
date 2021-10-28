@@ -55,13 +55,13 @@ public class TripsDAO extends AbstractDAO {
         try {
             Open();
             Cursor cursor = db.query(
-                Trip.TABLE_NAME,
-                columns,
-                Trip.USERNAME_COLUMN + " = ?",
-                new String[]{username},
-                null,
-                null,
-                null
+                    Trip.TABLE_NAME,
+                    columns,
+                    Trip.USERNAME_COLUMN + " = ?",
+                    new String[]{username},
+                    null,
+                    null,
+                    null
             );
 
             cursor.moveToFirst();

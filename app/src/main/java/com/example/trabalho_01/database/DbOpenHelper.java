@@ -10,13 +10,13 @@ import com.example.trabalho_01.database.model.Trip;
 public class DbOpenHelper extends SQLiteOpenHelper {
 
     public static final String
-            DATABASE_NOME="banco.db";
+            DATABASE_NOME="database.db";
 
     public static final int
             DB_VERSION = 1;
 
-    public DbOpenHelper(final Context contexto){
-        super(contexto, DATABASE_NOME,null, DB_VERSION);
+    public DbOpenHelper(final Context context){
+        super(context, DATABASE_NOME,null, DB_VERSION);
     }
 
     @Override

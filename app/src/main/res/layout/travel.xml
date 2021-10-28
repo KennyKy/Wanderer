@@ -40,11 +40,22 @@
 
 
         <Button
-            android:id="@+id/login"
+            android:id="@+id/add"
             android:layout_width="300dp"
             android:layout_height="80dp"
             android:layout_marginLeft="7dp"
             android:text="INICIAR VIAGEM"
+            android:textSize="25dp"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/logo">
+        </Button>
+
+        <Button
+            android:id="@+id/list"
+            android:layout_width="300dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="7dp"
+            android:text="LISTAR VIAGENS"
             android:textSize="25dp"
             android:textColor="@color/white"
             android:backgroundTint="@color/logo">
