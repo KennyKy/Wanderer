@@ -52,6 +52,7 @@
         android:textSize="20dp"
         android:layout_marginLeft="18dp"
         android:background="@color/white"
+        android:id="@+id/km_total"
         android:hint=" Informe a quilômetragem">
     </EditText>
 
@@ -71,6 +72,7 @@
         android:textSize="20dp"
         android:layout_marginLeft="18dp"
         android:background="@color/white"
+        android:id="@+id/fuel_by_km"
         android:hint=" Informe a média">
     </EditText>
 
@@ -90,6 +92,7 @@
         android:textSize="20dp"
         android:layout_marginLeft="18dp"
         android:background="@color/white"
+        android:id="@+id/avg_fuel_cost"
         android:hint=" Informe o custo médio por litro">
     </EditText>
 
@@ -109,8 +112,25 @@
         android:textSize="20dp"
         android:layout_marginLeft="18dp"
         android:background="@color/white"
+        android:id="@+id/total_cars"
         android:hint=" Informe o total de veículos">
     </EditText>
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:layout_marginTop="20dp"
+        android:baselineAligned="false"
+        android:checked="true"
+        android:gravity="left"
+        android:paddingHorizontal="10dp"
+        android:switchMinWidth="56dp"
+        android:text="Adicionar a viagem?"
+        android:textOff="OFF"
+        android:textOn="ON"
+        android:textSize="15dp" />
 
     <TextView
         android:layout_width="match_parent"
@@ -119,8 +139,18 @@
         android:layout_marginTop="35dp"
         android:layout_marginLeft="20dp"
         android:textSize="30dp"
+        android:id="@+id/total_field"
         android:textColor="@color/total">
     </TextView>
+
+    <Button
+        android:id="@+id/next_page_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:backgroundTint="@color/logo"
+        android:text="PRÓXIMO"
+        android:textColor="@color/white"></Button>
 
 </LinearLayout>
 

@@ -30,6 +30,8 @@ public class Travel extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Toast.makeText(Travel.this, "ADD", Toast.LENGTH_SHORT).show();
+                Intent fuel = new Intent(Travel.this, Fuel.class);
+                startActivity(fuel);
             }
         });
     }

@@ -40,4 +40,7 @@ public class Shared {
     public static final boolean getBoolean(final String key) {
         return PreferenceManager.getDefaultSharedPreferences(activity).getBoolean(key, false);
     }
+    public static final float getFloat(final String key) {
+        return PreferenceManager.getDefaultSharedPreferences(activity).getFloat(key, 0);
+    }
 }

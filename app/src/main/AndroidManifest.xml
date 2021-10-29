@@ -27,6 +27,25 @@
             android:name=".Travel">
         </activity>
 
+        <activity
+            android:name=".Fuel">
+        </activity>
+
+        <activity
+            android:name=".Airfare">
+        </activity>
+
+        <activity
+            android:name=".Snack">
+        </activity>
+
+        <activity
+            android:name=".Accommodation">
+        </activity>
+
+        <activity
+            android:name=".Entertainment">
+        </activity>
     </application>
 
 </manifest>

@@ -39,6 +39,26 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="30dp"
+        android:text="Quantidade de pessoas:"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="20dp"
+        android:textSize="20dp"
+        android:textColor="@color/black">
+    </TextView>
+
+    <EditText
+        android:layout_width="375dp"
+        android:layout_height="40dp"
+        android:textSize="20dp"
+        android:layout_marginLeft="18dp"
+        android:background="@color/white"
+        android:id="@+id/people_quantity"
+        android:hint=" Informe a quantidade de pessoas">
+    </EditText>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
         android:text="Custo estimado por pessoa:"
         android:layout_marginTop="15dp"
         android:layout_marginLeft="20dp"
@@ -52,6 +72,7 @@
         android:textSize="20dp"
         android:layout_marginLeft="18dp"
         android:background="@color/white"
+        android:id="@+id/estimated_cost"
         android:hint=" Informe custo estimado">
     </EditText>
 
@@ -71,8 +92,25 @@
         android:textSize="20dp"
         android:layout_marginLeft="18dp"
         android:background="@color/white"
+        android:id="@+id/car_rent"
         android:hint=" Informe o aluguel">
     </EditText>
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:layout_marginTop="20dp"
+        android:baselineAligned="false"
+        android:checked="true"
+        android:gravity="left"
+        android:paddingHorizontal="10dp"
+        android:switchMinWidth="56dp"
+        android:text="Adicionar a viagem?"
+        android:textOff="OFF"
+        android:textOn="ON"
+        android:textSize="15dp" />
 
     <TextView
         android:layout_width="match_parent"
@@ -81,9 +119,18 @@
         android:layout_marginTop="35dp"
         android:layout_marginLeft="20dp"
         android:textSize="30dp"
+        android:id="@+id/total_field"
         android:textColor="@color/total">
     </TextView>
 
+    <Button
+        android:id="@+id/next_page_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:backgroundTint="@color/logo"
+        android:text="PRÓXIMO"
+        android:textColor="@color/white"></Button>
 </LinearLayout>
 
 
