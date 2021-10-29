@@ -1,5 +1,6 @@
 package com.example.trabalho_01;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -46,6 +47,8 @@ public class CreateAccount extends AppCompatActivity {
                 } else {
                     if ( dao.insert(user) != -1 ) {
                         Toast.makeText(CreateAccount.this, "Usuário cadastrado.", Toast.LENGTH_LONG).show();
+                        Intent login = new Intent(CreateAccount.this, MainActivity.class);
+                        startActivity(login);
                     }
                 }
             }

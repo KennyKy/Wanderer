@@ -34,9 +34,6 @@ public class Fuel extends AppCompatActivity  {
         total_cars = findViewById(R.id.total_cars);
         total_field = findViewById(R.id.total_field);
 
-        float old_total = shared.getFloat("total_value");
-        total_field.setText(Float.toString(old_total));
-
         next_page_button = findViewById(R.id.next_page_button);
         switch1 = findViewById(R.id.switch1);
 
@@ -47,9 +44,9 @@ public class Fuel extends AppCompatActivity  {
             public void onClick(View view) {
                 float total;
 
-                if (switch1.getShowText()) {
+                if (switch1.isChecked()) {
                     total = (
-                            Float.parseFloat(km_total.getText().toString()) *
+                            Float.parseFloat(km_total.getText().toString()) /
                             Float.parseFloat(fuel_by_km.getText().toString()) *
                             Float.parseFloat(avg_fuel_cost.getText().toString()) *
                             Float.parseFloat(total_cars.getText().toString())
@@ -59,7 +56,7 @@ public class Fuel extends AppCompatActivity  {
                 }
 
                 shared.put("fuel_total", total);
-                shared.put("total_value", (total + old_total));
+                shared.put("total_value", (total));
 
                 Intent nextPage = new Intent(Fuel.this, Airfare.class);
                 startActivity(nextPage);

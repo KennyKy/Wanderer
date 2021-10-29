@@ -9,7 +9,6 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class Travel extends AppCompatActivity {
-
     private Button list;
     private Button add;
 
@@ -22,6 +21,7 @@ public class Travel extends AppCompatActivity {
         list.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                // TODO
                 Toast.makeText(Travel.this, "LIST", Toast.LENGTH_SHORT).show();
             }
         });
@@ -29,7 +29,6 @@ public class Travel extends AppCompatActivity {
         add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(Travel.this, "ADD", Toast.LENGTH_SHORT).show();
                 Intent fuel = new Intent(Travel.this, Fuel.class);
                 startActivity(fuel);
             }

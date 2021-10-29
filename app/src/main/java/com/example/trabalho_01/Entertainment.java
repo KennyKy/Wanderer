@@ -47,7 +47,7 @@ public class Entertainment extends AppCompatActivity  {
                 float total;
                 float old_total = shared.getFloat("entertainment_total");
 
-                if (switch1.getShowText()) {
+                if (switch1.isChecked()) {
                     total = Float.parseFloat(cost.getText().toString()) + old_total;
                 } else {
                     total = 0;
@@ -55,9 +55,9 @@ public class Entertainment extends AppCompatActivity  {
 
                 shared.put("entertainment_total", total);
 
+                total_field.setText(Float.toString(total));
                 name.setText("");
                 cost.setText("");
-                switch1.setShowText(false);
             }
         });
 
@@ -74,11 +74,13 @@ public class Entertainment extends AppCompatActivity  {
                 }
 
                 shared.put("entertainment_total", total);
-                shared.put("total_value", (total + old_total));
+                shared.put("total_value", (total));
 
                 name.setText("");
                 cost.setText("");
-                switch1.setShowText(false);
+
+                Intent travel = new Intent(Entertainment.this, Travel.class);
+                startActivity(travel);
             }
         });
     }

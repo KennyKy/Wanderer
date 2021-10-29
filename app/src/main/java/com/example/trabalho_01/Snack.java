@@ -26,7 +26,7 @@ public class Snack extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.snack);
 
-        estimated_cost = findViewById(R.id.km_total);
+        estimated_cost = findViewById(R.id.estimated_cost);
         total_snacks = findViewById(R.id.total_snacks);
         total_field = findViewById(R.id.total_field);
 
@@ -43,7 +43,7 @@ public class Snack extends AppCompatActivity {
             public void onClick(View view) {
                 float total;
 
-                if (switch1.getShowText()) {
+                if (switch1.isChecked()) {
                     total = (
                             Float.parseFloat(estimated_cost.getText().toString()) *
                             Float.parseFloat(total_snacks.getText().toString())

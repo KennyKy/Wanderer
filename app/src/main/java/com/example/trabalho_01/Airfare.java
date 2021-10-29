@@ -28,7 +28,7 @@ public class Airfare extends AppCompatActivity {
         setContentView(R.layout.airfare);
 
         people_quantity = findViewById(R.id.people_quantity);
-        estimated_cost = findViewById(R.id.km_total);
+        estimated_cost = findViewById(R.id.estimated_cost);
         car_rent = findViewById(R.id.car_rent);
         total_field = findViewById(R.id.total_field);
 
@@ -45,7 +45,7 @@ public class Airfare extends AppCompatActivity {
             public void onClick(View view) {
                 float total;
 
-                if (switch1.getShowText()) {
+                if (switch1.isChecked()) {
                     total = (
                             (
                                 Float.parseFloat(estimated_cost.getText().toString()) *
@@ -59,7 +59,7 @@ public class Airfare extends AppCompatActivity {
                 shared.put("airfare_total", total);
                 shared.put("total_value", (total + old_total));
 
-                Intent nextPage = new Intent(Airfare.this, CreateAccount.class);
+                Intent nextPage = new Intent(Airfare.this, Snack.class);
                 startActivity(nextPage);
             }
         });
