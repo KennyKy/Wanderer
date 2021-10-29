@@ -1,4 +1,4 @@
-package com.example.trabalho_01;
+package com.example.wanderer;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.trabalho_01.utils.Shared;
+import com.example.wanderer.utils.Shared;
 
 public class Accommodation extends AppCompatActivity {
     private EditText avg_cost;

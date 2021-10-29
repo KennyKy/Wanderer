@@ -1,18 +1,18 @@
-package com.example.trabalho_01.database.model;
+package com.example.wanderer.database.model;
 
-public class Trip {
+public class Travel {
     public static final String
-            TABLE_NAME="trips",
+            TABLE_NAME="travels",
             DISTANCE_IN_KMS_COLUMN="distance_in_kms",
             NUMBER_OF_PEOPLE_COLUMN="number_of_people",
             TOTAL_COST_COLUMN="total_cost",
             USERNAME_COLUMN="username";
 
     public static final String
-            CREATE_TABLE = "CREATE TABLE trips (distance_in_kms, number_of_people, total_cost, username);";
+            CREATE_TABLE = "CREATE TABLE travels (distance_in_kms, number_of_people, total_cost, username);";
 
     public static final String
-            DROP_TABLE = " drop table if exists users";
+            DROP_TABLE = " DROP TABLE IF EXISTS travels";
 
     private float distance_in_kms;
     private int number_of_people;

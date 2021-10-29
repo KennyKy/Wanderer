@@ -1,4 +1,4 @@
-package com.example.trabalho_01.utils;
+package com.example.wanderer.utils;
 
 import android.content.Context;
 import android.content.SharedPreferences;

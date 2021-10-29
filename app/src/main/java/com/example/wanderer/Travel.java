@@ -1,4 +1,4 @@
-package com.example.trabalho_01;
+package com.example.wanderer;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,21 +15,21 @@ public class Travel extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.travel);
-        list = findViewById(R.id.list);
         add = findViewById(R.id.add);
-
-        list.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                // TODO
-                Toast.makeText(Travel.this, "LIST", Toast.LENGTH_SHORT).show();
-            }
-        });
+        list = findViewById(R.id.list);
 
         add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent fuel = new Intent(Travel.this, Fuel.class);
+                startActivity(fuel);
+            }
+        });
+
+        list.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent fuel = new Intent(Travel.this, TravelList.class);
                 startActivity(fuel);
             }
         });

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.trabalho_01">
+    package="com.example.wanderer">
 
     <application
         android:allowBackup="true"
@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Trabalho_01">
         <activity
-            android:name=".MainActivity"
+            android:name="com.example.wanderer.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,31 +20,35 @@
         </activity>
 
         <activity
-            android:name=".CreateAccount">
+            android:name="com.example.wanderer.CreateAccount">
         </activity>
 
         <activity
-            android:name=".Travel">
+            android:name="com.example.wanderer.Travel">
         </activity>
 
         <activity
-            android:name=".Fuel">
+            android:name="com.example.wanderer.Fuel">
         </activity>
 
         <activity
-            android:name=".Airfare">
+            android:name="com.example.wanderer.Airfare">
         </activity>
 
         <activity
-            android:name=".Snack">
+            android:name="com.example.wanderer.Snack">
         </activity>
 
         <activity
-            android:name=".Accommodation">
+            android:name="com.example.wanderer.Accommodation">
         </activity>
 
         <activity
-            android:name=".Entertainment">
+            android:name="com.example.wanderer.Entertainment">
+        </activity>
+
+        <activity
+            android:name="com.example.wanderer.TravelList">
         </activity>
     </application>
 

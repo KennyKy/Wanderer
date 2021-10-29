@@ -1,4 +1,4 @@
-package com.example.trabalho_01;
+package com.example.wanderer;
 
 import android.content.Context;
 

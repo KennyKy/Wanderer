@@ -1,4 +1,4 @@
-package com.example.trabalho_01;
+package com.example.wanderer;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -10,9 +10,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.EditText;
 
-import com.example.trabalho_01.database.dao.UsersDAO;
-import com.example.trabalho_01.database.model.User;
-import com.example.trabalho_01.utils.Shared;
+import com.example.wanderer.database.dao.UsersDAO;
+import com.example.wanderer.database.model.User;
+import com.example.wanderer.utils.Shared;
 
 public class MainActivity extends AppCompatActivity {
 

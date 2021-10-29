@@ -1,11 +1,11 @@
-package com.example.trabalho_01.database;
+package com.example.wanderer.database;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import com.example.trabalho_01.database.model.User;
-import com.example.trabalho_01.database.model.Trip;
+import com.example.wanderer.database.model.User;
+import com.example.wanderer.database.model.Travel;
 
 public class DbOpenHelper extends SQLiteOpenHelper {
 
@@ -22,12 +22,12 @@ public class DbOpenHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(User.CREATE_TABLE);
-        db.execSQL(Trip.CREATE_TABLE);
+        db.execSQL(Travel.CREATE_TABLE);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL(User.CREATE_TABLE);
-        db.execSQL(Trip.CREATE_TABLE);
+        db.execSQL(Travel.CREATE_TABLE);
     }
 }

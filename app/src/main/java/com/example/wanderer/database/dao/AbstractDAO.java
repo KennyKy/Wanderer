@@ -1,9 +1,9 @@
-package com.example.trabalho_01.database.dao;
+package com.example.wanderer.database.dao;
 
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 
-import com.example.trabalho_01.database.DbOpenHelper;
+import com.example.wanderer.database.DbOpenHelper;
 
 public abstract class AbstractDAO {
 

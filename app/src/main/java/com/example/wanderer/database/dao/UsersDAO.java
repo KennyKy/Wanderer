@@ -1,11 +1,11 @@
-package com.example.trabalho_01.database.dao;
+package com.example.wanderer.database.dao;
 
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 
-import com.example.trabalho_01.database.DbOpenHelper;
-import com.example.trabalho_01.database.model.User;
+import com.example.wanderer.database.DbOpenHelper;
+import com.example.wanderer.database.model.User;
 
 public class UsersDAO extends AbstractDAO {
     private final String[]

@@ -1,4 +1,4 @@
-package com.example.trabalho_01.database.model;
+package com.example.wanderer.database.model;
 
 public class User {
     public static final String

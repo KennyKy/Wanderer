@@ -1,4 +1,4 @@
-package com.example.trabalho_01;
+package com.example.wanderer;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.trabalho_01.utils.Shared;
+import com.example.wanderer.utils.Shared;
 
 public class Entertainment extends AppCompatActivity  {
     private EditText name;
@@ -64,13 +64,10 @@ public class Entertainment extends AppCompatActivity  {
         finalize.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                float total;
-                float old_total = shared.getFloat("entertainment_total");
+                float total = shared.getFloat("entertainment_total");
 
                 if (switch1.getShowText()) {
-                    total = Float.parseFloat(cost.getText().toString()) + old_total;
-                } else {
-                    total = 0;
+                    total += Float.parseFloat(cost.getText().toString());
                 }
 
                 shared.put("entertainment_total", total);
@@ -78,6 +75,7 @@ public class Entertainment extends AppCompatActivity  {
 
                 name.setText("");
                 cost.setText("");
+
 
                 Intent travel = new Intent(Entertainment.this, Travel.class);
                 startActivity(travel);

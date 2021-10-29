@@ -1,4 +1,4 @@
-package com.example.trabalho_01;
+package com.example.wanderer;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,11 +10,13 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.trabalho_01.utils.Shared;
+import com.example.wanderer.utils.Shared;
 
-public class Snack extends AppCompatActivity {
-    private EditText estimated_cost;
-    private EditText total_snacks;
+public class Fuel extends AppCompatActivity  {
+    private EditText km_total;
+    private EditText fuel_by_km;
+    private EditText avg_fuel_cost;
+    private EditText total_cars;
     private TextView total_field;
 
     private Button next_page_button;
@@ -24,19 +26,18 @@ public class Snack extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.snack);
+        setContentView(R.layout.fuel);
 
-        estimated_cost = findViewById(R.id.estimated_cost);
-        total_snacks = findViewById(R.id.total_snacks);
+        km_total = findViewById(R.id.km_total);
+        fuel_by_km = findViewById(R.id.fuel_by_km);
+        avg_fuel_cost = findViewById(R.id.avg_fuel_cost);
+        total_cars = findViewById(R.id.total_cars);
         total_field = findViewById(R.id.total_field);
 
         next_page_button = findViewById(R.id.next_page_button);
         switch1 = findViewById(R.id.switch1);
 
-        float old_total = shared.getFloat("total_value");
-        total_field.setText(Float.toString(old_total));
-
-        shared = new Shared(Snack.this);
+        shared = new Shared(Fuel.this);
 
         next_page_button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,17 +46,19 @@ public class Snack extends AppCompatActivity {
 
                 if (switch1.isChecked()) {
                     total = (
-                            Float.parseFloat(estimated_cost.getText().toString()) *
-                            Float.parseFloat(total_snacks.getText().toString())
+                            Float.parseFloat(km_total.getText().toString()) /
+                            Float.parseFloat(fuel_by_km.getText().toString()) *
+                            Float.parseFloat(avg_fuel_cost.getText().toString()) *
+                            Float.parseFloat(total_cars.getText().toString())
                     );
                 } else {
                     total = 0;
                 }
 
-                shared.put("snack_total", total);
-                shared.put("total_value", (total + old_total));
+                shared.put("fuel_total", total);
+                shared.put("total_value", (total));
 
-                Intent nextPage = new Intent(Snack.this, Accommodation.class);
+                Intent nextPage = new Intent(Fuel.this, Airfare.class);
                 startActivity(nextPage);
             }
         });

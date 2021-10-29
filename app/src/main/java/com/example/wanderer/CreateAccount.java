@@ -1,4 +1,4 @@
-package com.example.trabalho_01;
+package com.example.wanderer;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,8 +7,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.trabalho_01.database.dao.UsersDAO;
-import com.example.trabalho_01.database.model.User;
+import com.example.wanderer.database.dao.UsersDAO;
+import com.example.wanderer.database.model.User;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class CreateAccount extends AppCompatActivity {
