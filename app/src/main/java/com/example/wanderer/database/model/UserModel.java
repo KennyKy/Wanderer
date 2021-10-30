@@ -1,6 +1,6 @@
 package com.example.wanderer.database.model;
 
-public class User {
+public class UserModel {
     public static final String
         TABLE_NAME="users",
         USERNAME_COLUMN="username",

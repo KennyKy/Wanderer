@@ -5,35 +5,36 @@ import android.content.Context;
 import android.database.Cursor;
 
 import com.example.wanderer.database.DbOpenHelper;
-import com.example.wanderer.database.model.Travel;
+import com.example.wanderer.database.model.TravelModel;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class TravelDAO extends AbstractDAO {
     private final String[]
             columns = {
-            Travel.DISTANCE_IN_KMS_COLUMN,
-            Travel.NUMBER_OF_PEOPLE_COLUMN,
-            Travel.TOTAL_COST_COLUMN,
-            Travel.USERNAME_COLUMN
+            TravelModel.DURATION_COLUMN,
+            TravelModel.NUMBER_OF_PEOPLE_COLUMN,
+            TravelModel.TOTAL_COST_COLUMN,
+            TravelModel.USERNAME_COLUMN
     };
 
     public TravelDAO(final Context context) {
         db_helper = new DbOpenHelper(context);
     }
 
-    public long Insert(Travel model) {
+    public long Insert(TravelModel model) {
         long numberOfRows;
 
         try {
             Open();
             ContentValues values = new ContentValues();
-            values.put(Travel.NUMBER_OF_PEOPLE_COLUMN, model.getNumberOfPeople());
-            values.put(Travel.TOTAL_COST_COLUMN, model.getTotalCost());
-            values.put(Travel.DISTANCE_IN_KMS_COLUMN, model.getDistance());
-            values.put(Travel.USERNAME_COLUMN, model.getUsername());
+            values.put(TravelModel.NUMBER_OF_PEOPLE_COLUMN, model.getNumberOfPeople());
+            values.put(TravelModel.TOTAL_COST_COLUMN, model.getTotalCost());
+            values.put(TravelModel.DURATION_COLUMN, model.getDuration());
+            values.put(TravelModel.USERNAME_COLUMN, model.getUsername());
 
-            numberOfRows = db.insert(Travel.TABLE_NAME, null, values);
+            numberOfRows = db.insert(TravelModel.TABLE_NAME, null, values);
         } catch (Error e) {
             numberOfRows = 0;
         } finally {
@@ -51,24 +52,23 @@ public class TravelDAO extends AbstractDAO {
         return 0;
     }
 
-    public List<Travel>  Select(final String username) {
-        List<Travel> travels = null;
+    public ArrayList<TravelModel> Select(final String username) {
+        ArrayList<TravelModel> travelModels = new ArrayList<>();
 
         try {
             Open();
             Cursor cursor = db.query(
-                    Travel.TABLE_NAME,
+                    TravelModel.TABLE_NAME,
                     columns,
-                    Travel.USERNAME_COLUMN + " = ?",
+                    TravelModel.USERNAME_COLUMN + " = ?",
                     new String[]{username},
                     null,
                     null,
                     null
             );
-
             cursor.moveToFirst();
             while (!cursor.isAfterLast()) {
-                travels.add(CursorToStructure(cursor));
+                travelModels.add(CursorToStructure(cursor));
                 break;
             }
         } catch (Error e) {
@@ -77,12 +77,12 @@ public class TravelDAO extends AbstractDAO {
             Close();
         }
 
-        return travels;
+        return travelModels;
     }
 
-    public final Travel CursorToStructure(Cursor cursor) {
-        Travel model = new Travel();
-        model.setDistance(cursor.getInt(0));
+    public final TravelModel CursorToStructure(Cursor cursor) {
+        TravelModel model = new TravelModel();
+        model.setDuration(cursor.getInt(0));
         model.setNumberOfPeople(cursor.getInt(1));
         model.setTotalCost(cursor.getFloat(2));
         model.setUsername(cursor.getString(3));

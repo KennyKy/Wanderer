@@ -5,30 +5,30 @@ import android.content.Context;
 import android.database.Cursor;
 
 import com.example.wanderer.database.DbOpenHelper;
-import com.example.wanderer.database.model.User;
+import com.example.wanderer.database.model.UserModel;
 
 public class UsersDAO extends AbstractDAO {
     private final String[]
             columns = {
-            User.EMAIL_COLUMN,
-            User.USERNAME_COLUMN,
-            User.PASSWORD_COLUMN,
+            UserModel.EMAIL_COLUMN,
+            UserModel.USERNAME_COLUMN,
+            UserModel.PASSWORD_COLUMN,
     };
 
     public UsersDAO(final Context context) {
         db_helper = new DbOpenHelper(context);
     }
 
-    public long insert(User model) {
+    public long insert(UserModel model) {
         long numberOfRows;
 
         try {
             Open();
             ContentValues values = new ContentValues();
-            values.put(User.EMAIL_COLUMN, model.getEmail());
-            values.put(User.USERNAME_COLUMN, model.getUsername());
-            values.put(User.PASSWORD_COLUMN, model.getPassword());
-            numberOfRows = db.insert(User.TABLE_NAME, null, values);
+            values.put(UserModel.EMAIL_COLUMN, model.getEmail());
+            values.put(UserModel.USERNAME_COLUMN, model.getUsername());
+            values.put(UserModel.PASSWORD_COLUMN, model.getPassword());
+            numberOfRows = db.insert(UserModel.TABLE_NAME, null, values);
         } catch (Error e) {
             numberOfRows = 0;
         } finally {
@@ -46,15 +46,15 @@ public class UsersDAO extends AbstractDAO {
         return 0;
     }
 
-    public User verifyLogin(final String username, final String password) {
+    public UserModel verifyLogin(final String username, final String password) {
 
-        User model = null;
+        UserModel model = null;
         try {
             Open();
             Cursor cursor = db.query(
-                    User.TABLE_NAME,
+                    UserModel.TABLE_NAME,
                     columns,
-                    User.USERNAME_COLUMN + " = ? and " + User.PASSWORD_COLUMN + " = ?",
+                    UserModel.USERNAME_COLUMN + " = ? and " + UserModel.PASSWORD_COLUMN + " = ?",
                     new String[]{username, password},
                     null,
                     null,
@@ -74,15 +74,15 @@ public class UsersDAO extends AbstractDAO {
         return model;
     }
 
-    public User select(final String username) {
-        User model = null;
+    public UserModel select(final String username) {
+        UserModel model = null;
 
         try {
             Open();
             Cursor cursor = db.query(
-                    User.TABLE_NAME,
+                    UserModel.TABLE_NAME,
                     columns,
-                    User.USERNAME_COLUMN + " = ?",
+                    UserModel.USERNAME_COLUMN + " = ?",
                     new String[]{username},
                     null,
                     null,
@@ -101,11 +101,11 @@ public class UsersDAO extends AbstractDAO {
         return model;
     }
 
-    public final User CursorToStructure(Cursor cursor) {
-        User model = new User();
+    public final UserModel CursorToStructure(Cursor cursor) {
+        UserModel model = new UserModel();
         model.setEmail(cursor.getString(0));
-        model.setPassword(cursor.getString(1));
-        model.setUsername(cursor.getString(2));
+        model.setUsername(cursor.getString(1));
+        model.setPassword(cursor.getString(2));
         return model;
     }
 }

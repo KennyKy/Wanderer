@@ -10,9 +10,6 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.wanderer.database.dao.TravelDAO;
-import com.example.wanderer.database.dao.UsersDAO;
-import com.example.wanderer.database.model.User;
 import com.example.wanderer.utils.Shared;
 
 public class Accommodation extends AppCompatActivity {
@@ -48,9 +45,9 @@ public class Accommodation extends AppCompatActivity {
 
                 if (switch1.isChecked()) {
                     total = (
-                            Float.parseFloat(avg_cost.getText().toString()) *
-                            Float.parseFloat(total_nights.getText().toString()) *
-                            Float.parseFloat(total_rooms.getText().toString())
+                        Float.parseFloat(avg_cost.getText().toString()) *
+                        Float.parseFloat(total_nights.getText().toString()) *
+                        Float.parseFloat(total_rooms.getText().toString())
                     );
                 } else {
                     total = 0;

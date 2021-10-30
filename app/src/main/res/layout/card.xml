@@ -39,23 +39,35 @@
                         android:text="Title" />
 
                     <TextView
-                        android:id="@+id/date"
+                        android:id="@+id/people"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="01/01/2001" />
+                        android:text="TESTE" />
+
+                    <TextView
+                        android:id="@+id/duration"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="TESTE" />
+
+                    <TextView
+                        android:id="@+id/cost"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="TESTE" />
+
+                    <TextView
+                        android:id="@+id/cost_per_person"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="TESTE" />
 
                 </LinearLayout>
             </GridLayout>
-
-            <TextView
-                android:id="@+id/total_cost"
-                android:layout_width="105dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="right|bottom"
-                android:layout_marginHorizontal="5dp"
-                android:text="Total cost" />
-
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>

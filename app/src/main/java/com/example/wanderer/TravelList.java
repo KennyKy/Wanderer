@@ -9,15 +9,17 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.wanderer.database.dao.TravelDAO;
+import com.example.wanderer.database.model.TravelModel;
 import com.example.wanderer.utils.RvAdapter;
-import com.example.wanderer.utils.TravelCard;
+import com.example.wanderer.utils.Shared;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class TravelList extends AppCompatActivity {
     private ImageView addTrip;
-    List<TravelCard> trips;
+    private Shared shared;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,13 +29,12 @@ public class TravelList extends AppCompatActivity {
         addTrip = findViewById(R.id.addTrip);
         RecyclerView rv = findViewById(R.id.recycler_view);
         LinearLayoutManager llm = new LinearLayoutManager(this);
+        shared = new Shared(TravelList.this);
 
-        trips = new ArrayList<>();
-        trips.add(new TravelCard(1,"Viagem 1", 500));
-        trips.add(new TravelCard(2,"Viagem 2", 500));
-        trips.add(new TravelCard(3,"Viagem 3", 500));
+        TravelDAO dao = new TravelDAO(TravelList.this);
+        ArrayList<TravelModel> travels = dao.Select(shared.getString("logged_user"));
 
-        RvAdapter adapter = new RvAdapter(trips);
+        RvAdapter adapter = new RvAdapter(travels);
 
         rv.setLayoutManager(llm);
         rv.setAdapter(adapter);

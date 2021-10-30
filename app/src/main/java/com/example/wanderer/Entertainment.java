@@ -11,7 +11,8 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.wanderer.database.dao.TravelDAO;
-import com.example.wanderer.database.model.User;
+
+import com.example.wanderer.database.model.TravelModel;
 import com.example.wanderer.utils.Shared;
 
 public class Entertainment extends AppCompatActivity  {
@@ -72,31 +73,25 @@ public class Entertainment extends AppCompatActivity  {
                     total += Float.parseFloat(cost.getText().toString());
                 }
 
-                shared.put("entertainment_total", total);
-                shared.put("total_value", (total));
+                shared.put("total_value", total);
 
                 int total_people = shared.getInt("total_people");
-                float total_travel_cost = shared.getFloat("entertainment_total");
                 float total_nights = shared.getInt("total_nights");
-                float cost_per_person = total_travel_cost / total_people;
+                String username = shared.getString("logged_user");
 
-                Travel travel = new Travel();
+                TravelModel travel = new TravelModel();
 
-                travel.setDistance(editDistance.getText().toString());
-                travel.setEmail(editEmail.getText().toString());
-                travel.setPassword(editPassword.getText().toString());
+                travel.setDuration(total_nights);
+                travel.setNumberOfPeople(total_people);
+                travel.setTotalCost(total);
+                travel.setUsername(username);
 
-
-                Travel verifyTravel = new Travel();
                 TravelDAO dao = new TravelDAO(Entertainment.this);
 
-                verifyTravel = dao.select(travel.getUsername());
+                dao.Insert(travel);
 
-                name.setText("");
-                cost.setText("");
-
-                Intent travel = new Intent(Entertainment.this, Travel.class);
-                startActivity(travel);
+                Intent travelIntent = new Intent(Entertainment.this, Travel.class);
+                startActivity(travelIntent);
             }
         });
     }

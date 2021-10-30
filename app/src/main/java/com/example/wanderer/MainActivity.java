@@ -11,7 +11,7 @@ import android.widget.Toast;
 import android.widget.EditText;
 
 import com.example.wanderer.database.dao.UsersDAO;
-import com.example.wanderer.database.model.User;
+import com.example.wanderer.database.model.UserModel;
 import com.example.wanderer.utils.Shared;
 
 public class MainActivity extends AppCompatActivity {
@@ -35,20 +35,20 @@ public class MainActivity extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                User user = new User();
+                UserModel userModel = new UserModel();
 
-                user.setUsername(editUser.getText().toString());
-                user.setPassword(editPassword.getText().toString());
+                userModel.setUsername(editUser.getText().toString());
+                userModel.setPassword(editPassword.getText().toString());
 
-                User verifyUser = new User();
+                UserModel verifyUserModel = new UserModel();
                 UsersDAO dao = new UsersDAO(MainActivity.this);
 
-                verifyUser = dao.verifyLogin(user.getUsername(), user.getPassword());
+                verifyUserModel = dao.verifyLogin(userModel.getUsername(), userModel.getPassword());
 
-                if ( verifyUser == null ) {
+                if ( verifyUserModel == null ) {
                     Toast.makeText(MainActivity.this, "Usuário ou senha incorretos.", Toast.LENGTH_SHORT).show();
                 } else {
-                    shared.put("logged_user", verifyUser.getUsername());
+                    shared.put("logged_user", verifyUserModel.getUsername());
                     Intent travel = new Intent(MainActivity.this, Travel.class);
                     startActivity(travel);
                 }

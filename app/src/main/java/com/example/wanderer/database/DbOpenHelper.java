@@ -4,8 +4,8 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import com.example.wanderer.database.model.User;
-import com.example.wanderer.database.model.Travel;
+import com.example.wanderer.database.model.UserModel;
+import com.example.wanderer.database.model.TravelModel;
 
 public class DbOpenHelper extends SQLiteOpenHelper {
 
@@ -21,13 +21,13 @@ public class DbOpenHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL(User.CREATE_TABLE);
-        db.execSQL(Travel.CREATE_TABLE);
+        db.execSQL(UserModel.CREATE_TABLE);
+        db.execSQL(TravelModel.CREATE_TABLE);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        db.execSQL(User.CREATE_TABLE);
-        db.execSQL(Travel.CREATE_TABLE);
+        db.execSQL(UserModel.CREATE_TABLE);
+        db.execSQL(TravelModel.CREATE_TABLE);
     }
 }

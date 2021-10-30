@@ -8,7 +8,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.wanderer.database.dao.UsersDAO;
-import com.example.wanderer.database.model.User;
+import com.example.wanderer.database.model.UserModel;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class CreateAccount extends AppCompatActivity {
@@ -29,11 +29,11 @@ public class CreateAccount extends AppCompatActivity {
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                User user = new User();
+                UserModel userModel = new UserModel();
 
-                user.setUsername(editUser.getText().toString());
-                user.setEmail(editEmail.getText().toString());
-                user.setPassword(editPassword.getText().toString());
+                userModel.setUsername(editUser.getText().toString());
+                userModel.setEmail(editEmail.getText().toString());
+                userModel.setPassword(editPassword.getText().toString());
 
                 if (editUser.getText().toString() == "" || editEmail.getText().toString() == "" || editPassword.getText().toString() == ""){
                     Toast.makeText(CreateAccount.this, "Por favor, preencha todos os campos!", Toast.LENGTH_SHORT).show();
@@ -41,15 +41,15 @@ public class CreateAccount extends AppCompatActivity {
                     return;
                 }
 
-                User verifyUser = new User();
+                UserModel verifyUserModel = new UserModel();
                 UsersDAO dao = new UsersDAO(CreateAccount.this);
 
-                verifyUser = dao.select(user.getUsername());
+                verifyUserModel = dao.select(userModel.getUsername());
 
-                if ( verifyUser != null ) {
+                if ( verifyUserModel != null ) {
                     Toast.makeText(CreateAccount.this, "Usuário já cadastrado, por favor insira outro usuário.", Toast.LENGTH_SHORT).show();
                 } else {
-                    if ( dao.insert(user) != -1 ) {
+                    if ( dao.insert(userModel) != -1 ) {
                         Toast.makeText(CreateAccount.this, "Usuário cadastrado.", Toast.LENGTH_LONG).show();
                         Intent login = new Intent(CreateAccount.this, MainActivity.class);
                         startActivity(login);

@@ -1,30 +1,30 @@
 package com.example.wanderer.database.model;
 
-public class Travel {
+public class TravelModel {
     public static final String
             TABLE_NAME="travels",
-            DISTANCE_IN_KMS_COLUMN="distance_in_kms",
+            DURATION_COLUMN="duration",
             NUMBER_OF_PEOPLE_COLUMN="number_of_people",
             TOTAL_COST_COLUMN="total_cost",
             USERNAME_COLUMN="username";
 
     public static final String
-            CREATE_TABLE = "CREATE TABLE travels (distance_in_kms, number_of_people, total_cost, username);";
+            CREATE_TABLE = "CREATE TABLE travels (duration, number_of_people, total_cost, username);";
 
     public static final String
             DROP_TABLE = " DROP TABLE IF EXISTS travels";
 
-    private float distance_in_kms;
+    private float duration;
     private int number_of_people;
     private float total_cost;
     private String username;
 
-    public float getDistance() {
-        return distance_in_kms;
+    public float getDuration() {
+        return duration;
     }
 
-    public void setDistance(float distance_in_kms) {
-        this.distance_in_kms = distance_in_kms;
+    public void setDuration(float duration) {
+        this.duration = duration;
     }
 
     public int getNumberOfPeople() {
