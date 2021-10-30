@@ -42,7 +42,7 @@ public class Accommodation extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 float total;
-
+                int totalNights = Integer.parseInt(total_nights.getText().toString());
                 if (switch1.isChecked()) {
                     total = (
                         Float.parseFloat(avg_cost.getText().toString()) *
@@ -55,7 +55,7 @@ public class Accommodation extends AppCompatActivity {
 
                 shared.put("accommodation_total", total);
                 shared.put("total_value", (total + old_total));
-                shared.put("total_nights", total_nights);
+                shared.put("total_nights", totalNights);
 
                 Intent createAccount = new Intent(Accommodation.this, Entertainment.class);
                 startActivity(createAccount);

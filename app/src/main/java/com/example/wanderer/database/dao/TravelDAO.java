@@ -69,7 +69,7 @@ public class TravelDAO extends AbstractDAO {
             cursor.moveToFirst();
             while (!cursor.isAfterLast()) {
                 travelModels.add(CursorToStructure(cursor));
-                break;
+                cursor.moveToNext();
             }
         } catch (Error e) {
 

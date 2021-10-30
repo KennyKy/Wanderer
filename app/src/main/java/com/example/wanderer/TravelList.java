@@ -20,6 +20,11 @@ import java.util.List;
 public class TravelList extends AppCompatActivity {
     private ImageView addTrip;
     private Shared shared;
+    private RvAdapter adapter;
+    private RecyclerView rv;
+    private LinearLayoutManager llm;
+    private ArrayList<TravelModel> travels;
+    private TravelDAO dao;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,14 +32,14 @@ public class TravelList extends AppCompatActivity {
         setContentView(R.layout.travel_list);
 
         addTrip = findViewById(R.id.addTrip);
-        RecyclerView rv = findViewById(R.id.recycler_view);
-        LinearLayoutManager llm = new LinearLayoutManager(this);
+        rv = findViewById(R.id.recycler_view);
+        llm = new LinearLayoutManager(this);
         shared = new Shared(TravelList.this);
 
-        TravelDAO dao = new TravelDAO(TravelList.this);
-        ArrayList<TravelModel> travels = dao.Select(shared.getString("logged_user"));
+        dao = new TravelDAO(TravelList.this);
+        travels = dao.Select(shared.getString("logged_user"));
 
-        RvAdapter adapter = new RvAdapter(travels);
+        adapter = new RvAdapter(travels);
 
         rv.setLayoutManager(llm);
         rv.setAdapter(adapter);

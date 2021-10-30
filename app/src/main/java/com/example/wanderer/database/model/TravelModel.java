@@ -14,16 +14,16 @@ public class TravelModel {
     public static final String
             DROP_TABLE = " DROP TABLE IF EXISTS travels";
 
-    private float duration;
+    private int duration;
     private int number_of_people;
     private float total_cost;
     private String username;
 
-    public float getDuration() {
+    public int getDuration() {
         return duration;
     }
 
-    public void setDuration(float duration) {
+    public void setDuration(int duration) {
         this.duration = duration;
     }
 

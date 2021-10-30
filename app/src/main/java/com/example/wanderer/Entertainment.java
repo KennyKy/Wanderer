@@ -76,7 +76,7 @@ public class Entertainment extends AppCompatActivity  {
                 shared.put("total_value", total);
 
                 int total_people = shared.getInt("total_people");
-                float total_nights = shared.getInt("total_nights");
+                int total_nights = shared.getInt("total_nights");
                 String username = shared.getString("logged_user");
 
                 TravelModel travel = new TravelModel();

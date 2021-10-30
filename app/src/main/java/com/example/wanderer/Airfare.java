@@ -44,6 +44,7 @@ public class Airfare extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 float total;
+                int totalPeople = Integer.parseInt(people_quantity.getText().toString());
 
                 if (switch1.isChecked()) {
                     total = (
@@ -56,7 +57,7 @@ public class Airfare extends AppCompatActivity {
                     total = 0;
                 }
 
-                shared.put("people", people_quantity);
+                shared.put("total_people", totalPeople);
                 shared.put("airfare_total", total);
                 shared.put("total_value", (total + old_total));
 
