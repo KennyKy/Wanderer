@@ -43,4 +43,7 @@ public class Shared {
     public static final float getFloat(final String key) {
         return PreferenceManager.getDefaultSharedPreferences(activity).getFloat(key, 0);
     }
+    public static final int getInt(final String key) {
+        return PreferenceManager.getDefaultSharedPreferences(activity).getInt(key, 0);
+    }
 }

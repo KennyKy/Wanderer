@@ -35,7 +35,11 @@ public class CreateAccount extends AppCompatActivity {
                 user.setEmail(editEmail.getText().toString());
                 user.setPassword(editPassword.getText().toString());
 
-                //TODO: Validação dos campos
+                if (editUser.getText().toString() == "" || editEmail.getText().toString() == "" || editPassword.getText().toString() == ""){
+                    Toast.makeText(CreateAccount.this, "Por favor, preencha todos os campos!", Toast.LENGTH_SHORT).show();
+
+                    return;
+                }
 
                 User verifyUser = new User();
                 UsersDAO dao = new UsersDAO(CreateAccount.this);
@@ -45,10 +49,7 @@ public class CreateAccount extends AppCompatActivity {
                 if ( verifyUser != null ) {
                     Toast.makeText(CreateAccount.this, "Usuário já cadastrado, por favor insira outro usuário.", Toast.LENGTH_SHORT).show();
                 } else {
-                    if (editUser.getText().toString() == "" || editEmail.getText().toString() == "" || editPassword.getText().toString() == ""){
-                        Toast.makeText(CreateAccount.this, "Por favor, preencha todos os campos!", Toast.LENGTH_SHORT).show();
-                    }
-                    else if ( dao.insert(user) != -1 ) {
+                    if ( dao.insert(user) != -1 ) {
                         Toast.makeText(CreateAccount.this, "Usuário cadastrado.", Toast.LENGTH_LONG).show();
                         Intent login = new Intent(CreateAccount.this, MainActivity.class);
                         startActivity(login);

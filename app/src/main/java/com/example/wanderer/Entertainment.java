@@ -10,6 +10,8 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.wanderer.database.dao.TravelDAO;
+import com.example.wanderer.database.model.User;
 import com.example.wanderer.utils.Shared;
 
 public class Entertainment extends AppCompatActivity  {
@@ -73,9 +75,25 @@ public class Entertainment extends AppCompatActivity  {
                 shared.put("entertainment_total", total);
                 shared.put("total_value", (total));
 
+                int total_people = shared.getInt("total_people");
+                float total_travel_cost = shared.getFloat("entertainment_total");
+                float total_nights = shared.getInt("total_nights");
+                float cost_per_person = total_travel_cost / total_people;
+
+                Travel travel = new Travel();
+
+                travel.setDistance(editDistance.getText().toString());
+                travel.setEmail(editEmail.getText().toString());
+                travel.setPassword(editPassword.getText().toString());
+
+
+                Travel verifyTravel = new Travel();
+                TravelDAO dao = new TravelDAO(Entertainment.this);
+
+                verifyTravel = dao.select(travel.getUsername());
+
                 name.setText("");
                 cost.setText("");
-
 
                 Intent travel = new Intent(Entertainment.this, Travel.class);
                 startActivity(travel);

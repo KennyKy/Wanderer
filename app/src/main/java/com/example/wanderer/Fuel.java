@@ -57,6 +57,7 @@ public class Fuel extends AppCompatActivity  {
 
                 shared.put("fuel_total", total);
                 shared.put("total_value", (total));
+                shared.put("km_total", km_total);
 
                 Intent nextPage = new Intent(Fuel.this, Airfare.class);
                 startActivity(nextPage);

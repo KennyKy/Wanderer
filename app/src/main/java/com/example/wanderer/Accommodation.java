@@ -10,6 +10,9 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.wanderer.database.dao.TravelDAO;
+import com.example.wanderer.database.dao.UsersDAO;
+import com.example.wanderer.database.model.User;
 import com.example.wanderer.utils.Shared;
 
 public class Accommodation extends AppCompatActivity {
@@ -55,6 +58,7 @@ public class Accommodation extends AppCompatActivity {
 
                 shared.put("accommodation_total", total);
                 shared.put("total_value", (total + old_total));
+                shared.put("total_nights", total_nights);
 
                 Intent createAccount = new Intent(Accommodation.this, Entertainment.class);
                 startActivity(createAccount);

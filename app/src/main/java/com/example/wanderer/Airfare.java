@@ -56,6 +56,7 @@ public class Airfare extends AppCompatActivity {
                     total = 0;
                 }
 
+                shared.put("people", people_quantity);
                 shared.put("airfare_total", total);
                 shared.put("total_value", (total + old_total));
 
