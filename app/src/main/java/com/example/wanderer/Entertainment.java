@@ -48,7 +48,7 @@ public class Entertainment extends AppCompatActivity  {
             @Override
             public void onClick(View view) {
                 float total;
-                float old_total = shared.getFloat("entertainment_total");
+                float old_total = shared.getFloat("total_value");
 
                 if (switch1.isChecked()) {
                     total = Float.parseFloat(cost.getText().toString()) + old_total;
@@ -67,10 +67,10 @@ public class Entertainment extends AppCompatActivity  {
         finalize.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                float total = shared.getFloat("entertainment_total");
+                float total = shared.getFloat("total_value");
 
                 if (switch1.getShowText()) {
-                    total += Float.parseFloat(cost.getText().toString());
+                    total = total + Float.parseFloat(cost.getText().toString());
                 }
 
                 shared.put("total_value", total);
