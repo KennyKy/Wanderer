@@ -14,113 +14,118 @@
         <TextView
             android:layout_width="410dp"
             android:layout_height="match_parent"
-            android:layout_marginTop="7dp"
             android:drawableLeft="@drawable/menu"
             android:text="Planejar Viagem"
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textSize="25dp"></TextView>
+            android:textSize="25dp"
+            android:gravity="center_vertical"
+            android:textColor="@color/black"></TextView>
 
     </LinearLayout>
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="350dp"
         android:layout_height="50dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="15dp"
         android:drawableLeft="@drawable/bed"
         android:text="Hospedagem"
-        android:textColor="@color/black"
-        android:textSize="35dp"></TextView>
+        android:textSize="35dp"
+        android:layout_marginTop="15dp"
+        android:layout_gravity="center"
+        android:textColor="@color/black"></TextView>
 
     <TextView
-        android:layout_width="374dp"
-        android:layout_height="30dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="15dp"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
         android:text="Custo médio (por noite):"
-        android:textColor="@color/black"
-        android:textSize="20dp"></TextView>
+        android:textSize="55px"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:textColor="@color/black"></TextView>
+
 
     <EditText
+        android:layout_width="350dp"
+        android:layout_height="34dp"
+        android:hint="Informe o custo médio"
         android:id="@+id/avg_cost"
-        android:layout_width="375dp"
-        android:layout_height="40dp"
-        android:layout_marginLeft="18dp"
+        android:layout_gravity="center"
+        android:textSize="50px"
         android:background="@color/white"
-        android:hint=" Informe o custo médio"
-        android:textSize="20dp"></EditText>
+        android:textColor="@color/icons"></EditText>
 
     <TextView
-        android:layout_width="374dp"
-        android:layout_height="30dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="15dp"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
         android:text="Total de noites:"
-        android:textColor="@color/black"
-        android:textSize="20dp"></TextView>
+        android:textSize="55px"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:textColor="@color/black"></TextView>
 
     <EditText
-        android:layout_width="375dp"
-        android:layout_height="40dp"
-        android:layout_marginLeft="18dp"
-        android:background="@color/white"
-        android:hint=" Informe o total de noites"
+        android:layout_width="350dp"
+        android:layout_height="34dp"
+        android:hint="Informe o total de noites"
         android:id="@+id/total_nights"
-        android:textSize="20dp"></EditText>
+        android:layout_gravity="center"
+        android:textSize="50px"
+        android:background="@color/white"
+        android:textColor="@color/icons"></EditText>
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="15dp"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
         android:text="Total de quartos:"
-        android:textColor="@color/black"
-        android:textSize="20dp"></TextView>
+        android:textSize="55px"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:textColor="@color/black"></TextView>
 
     <EditText
-        android:layout_width="375dp"
-        android:layout_height="40dp"
-        android:layout_marginLeft="18dp"
-        android:background="@color/white"
-        android:hint=" Informe o total de quartos"
+        android:layout_width="350dp"
+        android:layout_height="34dp"
+        android:hint="Informe o total de quartos"
         android:id="@+id/total_rooms"
-        android:textSize="20dp"></EditText>
+        android:layout_gravity="center"
+        android:textSize="50px"
+        android:background="@color/white"
+        android:textColor="@color/icons"></EditText>
 
     <Switch
         android:id="@+id/switch1"
-        android:layout_width="match_parent"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_columnWeight="1"
         android:layout_marginTop="20dp"
         android:baselineAligned="false"
         android:checked="true"
         android:gravity="left"
+        android:layout_gravity="center"
         android:paddingHorizontal="10dp"
         android:switchMinWidth="56dp"
         android:text="Adicionar a viagem?"
         android:textOff="OFF"
         android:textOn="ON"
-        android:textSize="15dp" />
+        android:textSize="17dp" />
 
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="350dp"
         android:layout_height="35dp"
         android:text="Total:"
-        android:layout_marginTop="35dp"
-        android:layout_marginLeft="20dp"
-        android:textSize="30dp"
         android:id="@+id/total_field"
-        android:textColor="@color/total">
-    </TextView>
+        android:layout_marginTop="35dp"
+        android:layout_gravity="center"
+        android:textSize="30dp"
+        android:textColor="@color/total"></TextView>
 
     <Button
         android:id="@+id/next_page_button"
-        android:layout_width="match_parent"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:layout_marginTop="100dp"
         android:backgroundTint="@color/logo"
         android:text="PRÓXIMO"
+        android:textSize="17dp"
         android:textColor="@color/white"></Button>
 </LinearLayout>
 

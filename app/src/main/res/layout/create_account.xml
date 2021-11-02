@@ -6,63 +6,65 @@
     android:orientation="vertical">
 
     <ImageView
-        android:layout_width="150dp"
+        android:layout_width="match_parent"
         android:layout_height="150dp"
-        android:layout_marginLeft="125dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="125dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
         android:src="@drawable/logo"></ImageView>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginRight="12dp"
-        android:gravity="center_horizontal"
         android:text="WANDERER"
+        android:textSize="75px"
         android:textColor="@color/logo"
-        android:textSize="75px"></TextView>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="35dp"
-        android:layout_marginTop="20dp"
-        android:text="Account Creation"
-        android:textColor="@color/icons"
-        android:textSize="75px"></TextView>
+        android:layout_gravity="center"
+        android:gravity="center_horizontal"></TextView>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="35dp"
-        android:layout_marginTop="12dp"
+        android:text="Account Creation"
+        android:textSize="75px"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:textColor="@color/black"></TextView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:text="Enter your details below to create your account:"
-        android:textColor="@color/icons"
-        android:textSize="40px"></TextView>
+        android:textSize="40px"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:textColor="@color/black"></TextView>
 
     <EditText
         android:id="@+id/editUsername"
-        android:layout_width="match_parent"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center"
         android:drawableRight="@drawable/user"
         android:hint="Username"
         android:textColor="@color/icons"></EditText>
 
     <EditText
         android:id="@+id/editEmail"
-        android:layout_width="match_parent"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
+        android:layout_gravity="center"
         android:drawableRight="@drawable/ic_envelope_solid"
         android:hint="Email"
         android:textColor="@color/icons"></EditText>
 
     <EditText
         android:id="@+id/editPassword"
-        android:layout_width="match_parent"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
+        android:layout_gravity="center"
         android:drawableRight="@drawable/key"
         android:hint="Password"
         android:inputType="textPassword"
@@ -70,9 +72,10 @@
 
     <Button
         android:id="@+id/crate_account_button"
-        android:layout_width="match_parent"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
+        android:layout_gravity="center"
         android:backgroundTint="@color/logo"
         android:text="CREATE"
         android:textColor="@color/white">

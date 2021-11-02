@@ -17,119 +17,115 @@
             android:layout_height="match_parent"
             android:drawableLeft="@drawable/menu"
             android:text="Planejar Viagem"
-            android:textColor="@color/black"
             android:textSize="25dp"
-            android:textAlignment="center"
-            android:layout_marginTop="7dp">
-        </TextView>
+            android:gravity="center_vertical"
+            android:textColor="@color/black"></TextView>
 
     </LinearLayout>
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="350dp"
         android:layout_height="50dp"
         android:drawableLeft="@drawable/plane"
         android:text="Tarifa Aérea"
-        android:layout_marginTop="15dp"
-        android:layout_marginLeft="16dp"
         android:textSize="35dp"
-        android:textColor="@color/black">
-    </TextView>
+        android:layout_marginTop="15dp"
+        android:layout_gravity="center"
+        android:textColor="@color/black"></TextView>
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="30dp"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
         android:text="Quantidade de pessoas:"
-        android:layout_marginTop="15dp"
-        android:layout_marginLeft="20dp"
-        android:textSize="20dp"
-        android:textColor="@color/black">
-    </TextView>
+        android:textSize="55px"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:textColor="@color/black"></TextView>
 
     <EditText
-        android:layout_width="375dp"
-        android:layout_height="40dp"
-        android:textSize="20dp"
-        android:layout_marginLeft="18dp"
-        android:background="@color/white"
+        android:layout_width="350dp"
+        android:layout_height="34dp"
+        android:hint="Informe a quantidade de pessoas"
         android:id="@+id/people_quantity"
-        android:hint=" Informe a quantidade de pessoas">
-    </EditText>
+        android:layout_gravity="center"
+        android:textSize="50px"
+        android:background="@color/white"
+        android:textColor="@color/icons"></EditText>
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="30dp"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
         android:text="Custo estimado por pessoa:"
-        android:layout_marginTop="15dp"
-        android:layout_marginLeft="20dp"
-        android:textSize="20dp"
-        android:textColor="@color/black">
-    </TextView>
+        android:textSize="55px"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:textColor="@color/black"></TextView>
 
     <EditText
-        android:layout_width="375dp"
-        android:layout_height="40dp"
-        android:textSize="20dp"
-        android:layout_marginLeft="18dp"
-        android:background="@color/white"
+        android:layout_width="350dp"
+        android:layout_height="34dp"
+        android:hint="Informe o custo estimado"
         android:id="@+id/estimated_cost"
-        android:hint=" Informe custo estimado">
-    </EditText>
+        android:layout_gravity="center"
+        android:textSize="50px"
+        android:background="@color/white"
+        android:textColor="@color/icons"></EditText>
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:text="Aluguel de veículo:"
-        android:layout_marginTop="15dp"
-        android:layout_marginLeft="20dp"
-        android:textSize="20dp"
-        android:textColor="@color/black">
-    </TextView>
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:text="Aluguel do veículo:"
+        android:textSize="55px"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:textColor="@color/black"></TextView>
 
     <EditText
-        android:layout_width="375dp"
-        android:layout_height="40dp"
-        android:textSize="20dp"
-        android:layout_marginLeft="18dp"
-        android:background="@color/white"
+        android:layout_width="350dp"
+        android:layout_height="34dp"
+        android:hint="Informe o aluguel"
         android:id="@+id/car_rent"
-        android:hint=" Informe o aluguel">
-    </EditText>
+        android:textSize="50px"
+        android:layout_gravity="center"
+        android:background="@color/white"
+        android:textColor="@color/icons"></EditText>
 
     <Switch
         android:id="@+id/switch1"
-        android:layout_width="match_parent"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_columnWeight="1"
         android:layout_marginTop="20dp"
         android:baselineAligned="false"
         android:checked="true"
         android:gravity="left"
+        android:layout_gravity="center"
         android:paddingHorizontal="10dp"
         android:switchMinWidth="56dp"
         android:text="Adicionar a viagem?"
         android:textOff="OFF"
         android:textOn="ON"
-        android:textSize="15dp" />
+        android:textSize="17dp" />
 
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="350dp"
         android:layout_height="35dp"
         android:text="Total:"
-        android:layout_marginTop="35dp"
-        android:layout_marginLeft="20dp"
-        android:textSize="30dp"
         android:id="@+id/total_field"
-        android:textColor="@color/total">
-    </TextView>
+        android:layout_marginTop="35dp"
+        android:layout_gravity="center"
+        android:textSize="30dp"
+        android:textColor="@color/total"></TextView>
 
     <Button
         android:id="@+id/next_page_button"
-        android:layout_width="match_parent"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:layout_marginTop="100dp"
         android:backgroundTint="@color/logo"
         android:text="PRÓXIMO"
+        android:textSize="17dp"
         android:textColor="@color/white"></Button>
 </LinearLayout>
 

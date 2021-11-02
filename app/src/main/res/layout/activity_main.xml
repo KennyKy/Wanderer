@@ -8,24 +8,20 @@
 
 
     <ImageView
-        android:layout_width="150dp"
+        android:layout_width="match_parent"
         android:layout_height="150dp"
-        android:layout_marginLeft="125dp"
-        android:layout_marginRight="125dp"
-        android:layout_marginTop="55dp"
-        android:src="@drawable/logo">
-
-    </ImageView>
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/logo"></ImageView>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="WANDERER"
         android:textSize="75px"
-        android:layout_marginRight="12dp"
+        android:layout_gravity="center"
         android:textColor="@color/logo"
-        android:gravity="center_horizontal">
-    </TextView>
+        android:gravity="center_horizontal"></TextView>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -35,28 +31,21 @@
         android:layout_marginRight="50dp"
         android:layout_marginTop="60dp">
 
-
-
         <EditText
             android:id="@+id/editUser"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Username"
+            android:text="Username"
             android:textColor="@color/icons"
-            android:drawableRight="@drawable/user">
-
-        </EditText>
+            android:drawableRight="@drawable/user"></EditText>
 
         <EditText
             android:id="@+id/editPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Password"
-            android:inputType="textPassword"
+            android:text="Password"
             android:textColor="@color/icons"
-            android:drawableRight="@drawable/key">
-
-        </EditText>
+            android:drawableRight="@drawable/key"></EditText>
 
         <Button
             android:id="@+id/login"
@@ -64,21 +53,18 @@
             android:layout_height="wrap_content"
             android:text="LOG IN"
             android:textColor="@color/white"
-            android:backgroundTint="@color/logo">
-        </Button>
+            android:backgroundTint="@color/logo"></Button>
 
     </LinearLayout>
 
     <TextView
         android:id="@+id/create_account"
         android:layout_width="wrap_content"
-        android:layout_height="match_parent"
+        android:layout_height="25dp"
         android:layout_marginTop="130dp"
         android:text="Don\'t have an account? Create One"
         android:textSize="50px"
         android:textColor="@color/icons"
-        android:layout_gravity="center_horizontal"
-        >
-    </TextView>
+        android:layout_gravity="center_horizontal"></TextView>
 
 </LinearLayout>
