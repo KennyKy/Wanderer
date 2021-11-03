@@ -137,16 +137,21 @@
         android:textSize="30dp"
         android:textColor="@color/total"></TextView>
 
-    <Button
-        android:id="@+id/next_page_button"
-        android:layout_width="350dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="100dp"
-        android:backgroundTint="@color/logo"
-        android:text="PRÓXIMO"
-        android:textSize="17dp"
-        android:textColor="@color/white"></Button>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/next_page_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:backgroundTint="@color/logo"
+            android:text="PRÓXIMO"
+            android:textSize="17dp"
+            android:textColor="@color/white"></Button>
+
+    </LinearLayout>
 
 </LinearLayout>
 
