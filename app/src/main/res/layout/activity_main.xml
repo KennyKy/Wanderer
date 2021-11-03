@@ -35,16 +35,14 @@
             android:id="@+id/editUser"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Username"
-            android:textColor="@color/icons"
+            android:hint="Username"
             android:drawableRight="@drawable/user"></EditText>
 
         <EditText
             android:id="@+id/editPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Password"
-            android:textColor="@color/icons"
+            android:hint="Password"
             android:drawableRight="@drawable/key"></EditText>
 
         <Button
