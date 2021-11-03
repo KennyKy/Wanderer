@@ -24,7 +24,7 @@ public class CreateAccount extends AppCompatActivity {
         editUser = findViewById(R.id.editUsername);
         editPassword = findViewById(R.id.editPassword);
         editEmail = findViewById(R.id.editEmail);
-        signup = findViewById(R.id.crate_account_button);
+        signup = findViewById(R.id.create_account);
 
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
