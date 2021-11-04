@@ -57,6 +57,7 @@ public class Entertainment extends AppCompatActivity  {
                 }
 
                 shared.put("entertainment_total", total);
+                shared.put("total_value", total);
 
                 total_field.setText(Float.toString(total));
                 name.setText("");
